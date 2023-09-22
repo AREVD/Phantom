@@ -3,9 +3,9 @@ This repository contains the developmental artifacts for the custom phantom skul
 
 # Outline
 1. [Overview](https://github.com/AREVD/Phantom/blob/main/README.md#overview)
-2. [Hardware Setup](https://github.com/AREVD/Phantom/blob/main/README.md#hardware_setup)
-3. [Raspberry Pi Software Setup]
-4. [Implementation]
+2. [Hardware Setup](https://github.com/AREVD/Phantom/blob/main/README.md#hardware-setup)
+3. [Software Setup](https://github.com/AREVD/Phantom/blob/main/README.md#hardware-setup)
+4. [Quick Start](https://github.com/AREVD/Phantom/blob/main/README.md#quick-start)
 
 # Overview
 
@@ -26,10 +26,11 @@ Our AR system provides real-time feedback to the user, who performs a catheter i
 ### Gelatin Mold
 1. Acrylic Sheets
 2. [CHANZON White LED Diode Lights](https://a.co/d/ftPlEu8)
-3. [Custom Collagen SuperClear Gelatin](https://customcollagenshop.com/products/superclear-gelatin)
+3. [PandaHall Metal Beads](https://a.co/d/ffelK5M)
+4. [Custom Collagen SuperClear Gelatin](https://customcollagenshop.com/products/superclear-gelatin)
 
 ### Additional Tools and Materials
-1. Hot glue + hot glue gun
+1. Hot glue and hot glue gun
 2. Nuts and bolts for securing cameras onto camera mounts
 3. Electrical tape for securing camera mounts to gelatin mold
 4. (2x) Female to female DuPont wires (~50cm)
@@ -41,25 +42,24 @@ All 3D models were printed using PLA filament and Ultimaker 3 printers. Black fi
 
 ## Camera Hardware Setup
 
-Required 3D print: [Camera_mounts.stl](https://github.com/AREVD/Phantom/3D_Models/Camera_mounts.stl)
+Required 3D print: [Camera_mounts.stl](https://github.com/AREVD/Phantom/blob/main/3D%20Models/Camera_mounts.stl)
 
 1. Replace cameras' native cables with the 60cm extension cables.
 2. Secure cameras to camera mounts using nuts and bolts on the four corners of each camera.
-3. Connect cameras to the multi camera adapter using the extension cables.
+3. Connect cameras to the multi camera adapter's A and C ports using the extension cables.
 4. Mount the adapter to pins 1-26 of the Raspberry Pi. Secure with nuts and bolts if desired.
 5. Connect the adapter's camera cable to the Raspberry Pi.
 
 ## Gelatin Mold Setup
 
-Required 3D print: [Gelatin_mold.stl](https://github.com/AREVD/Phantom/3D_Models/Gelatin_mold.stl)
+Required 3D print: [Gelatin_mold.stl](https://github.com/AREVD/Phantom/tree/main/3D%20Models/Gelatin_mold.stl)
 
 1. Cut acrylic sheets into 2-inch squares. Two squares are needed per mold.
 2. Secure squares from the inside of the gelatin mold using hot glue along all edges of the squares.
 3. Secure LED diode light to the bottom corner between the two camera windows using hot glue.
-4. Ensure the mold is water-tight - if not, add hot glue as necessary.
-5. Connect the LED diode light to pins 32 (GPIO 12) and 34 (Ground) using DuPont wires. 
-
-*Note: For troubleshooting regarding the multi camera adapter, please refer to the [Arducam documentation of the product.](https://docs.arducam.com/Raspberry-Pi-Camera/Multi-Camera-CamArray/Multi-Camera-CamArray/#arducam-multi-camera-adapter-board)*
+4. Secure 6mm metal bead to the spherical indentation within the mold.
+5. Ensure the mold is water-tight by filling it with water; if not, add hot glue as necessary.
+6. Connect the LED diode light to pins 32 (GPIO 12) and 34 (Ground) using DuPont wires. 
 
 ## Gelatin Mixture Instructions
 
@@ -76,10 +76,41 @@ The following steps yield three molds' worth of gelatin mixture.
 
 ## Final Hardware Setup
 
-Required 3D prints: [Top_skull_pegs.stl](https://github.com/AREVD/Phantom/3D_Models/Top_skull_pegs.stl), [Bottom_skull_pegs.stl](https://github.com/AREVD/Phantom/3D_Models/Bottom_skull_pegs.stl)
+Required 3D prints: [Top_skull_pegs.stl](https://github.com/AREVD/Phantom/tree/main/3D%20Models/Top_skull_pegs.stl), [Bottom_skull_pegs.stl](https://github.com/AREVD/Phantom/tree/main/3D%20Models/Bottom_skull_pegs.stl)
 
 1. Thread the DuPont wires through the holes in the bottom of the phantom into the inside of the phantom.
 2. Connect the DuPont wires to the LED diode light of the gelatin mold.
-3. Secure the camera mounts onto the gelatin mold using electrical tape.
+3. Secure the camera mounts onto the gelatin mold using electrical tape. Position A at the back of the phantom and C on the right side of the phantom.
 4. Insert the mold into the peg in the center of the phantom.
 5. Close the phantom by connecting the top of the skull to the bottom of the skull. Secure with tape if necessary.
+6. Color the tip of the catheter using polish, paint, or silicone dye in a 2mm region. Our development uses a green color, but a different bright color that looks distinct from the rest of the environment (mold color, catheter color) may be used, although some colors may be suboptimal.
+
+# Software Setup
+
+*Note: Our development uses a Raspberry Pi 4 Model B running Raspbian OS. The steps below may not work as expected on different operating systems.
+
+1. Install the following packages using a Raspberry Pi terminal.
+
+```
+sudo apt install python3-opencv
+sudo apt-get install python3-numpy
+sudo apt-get install python3-picamera2
+sudo apt-get install python3-scipy
+sudo apt-get install python3-matplotlib
+pip install keyboard
+```
+
+2. Disable the legacy camera option in Raspberry Pi configuration settings. If this option cannot be found in the settings menu, the configuration menu can be accessed by typing `raspi-config` into a terminal. A reboot will be required.
+
+*Note: For troubleshooting regarding the multi camera adapter, please refer to the [Arducam documentation of the product.](https://docs.arducam.com/Raspberry-Pi-Camera/Multi-Camera-CamArray/Multi-Camera-CamArray/#arducam-multi-camera-adapter-board)*
+
+## Quick Start
+
+We provide a [straightforward script](https://github.com/AREVD/Phantom/blob/main/NeuroLens%20User%20Study/AR.py), AR.py, for real-time distance calculation, as well as a video feed from both cameras, utilizing camera calibration optimized for our experimental setup. The images and code used for calibration can be found in [this folder](https://github.com/AREVD/Phantom/tree/main/Fisheye%20Calibration%20Core). The output files of stereo.py are used to perform stereo camera calibration when running AR.py.
+
+### Notes
+
++ The location of the foramen of Monro is specified in the `triangulate` function as the variables `pointA` and `pointB`. These values can be adjusted if necessary.
++ The tip of the catheter is colored green in our development, and the code reflects this in lines 237-242. These RGB value thresholds are responsible for identifying the 2D location of the tip of the catheter in each camera view by identifying green pixels and finding the average of the x and y coordinates of the pixels. These thresholds can be adjusted to handle differences in lighting conditions and/or different color choices for the catheter tip.
++ Manual offsets in line 274 can be adjusted to accommodate differences in observed distance values, which may result from variations between individual cameras.
++ The brightness level is set using pulse width modulation (PWM), as full brightness can often make the identification of the catheter tip color difficult due to over-exposure. This results in visible flickering of the LED, which is expected. The brightness level is set at 25% in lines 297-298, and can be adjusted as necessary.
