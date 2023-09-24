@@ -106,11 +106,40 @@ pip install keyboard
 
 ## Quick Start
 
-We provide a [straightforward script](https://github.com/AREVD/Phantom/blob/main/NeuroLens%20User%20Study/AR.py), AR.py, for real-time distance calculation, as well as a video feed from both cameras, utilizing camera calibration optimized for our experimental setup. The images and code used for calibration can be found in [this folder](https://github.com/AREVD/Phantom/tree/main/Fisheye%20Calibration%20Core). The output files of stereo.py are used to perform stereo camera calibration when running AR.py.
+We provide a [straightforward script](https://github.com/AREVD/Phantom/blob/main/Quick%20Start/AR.py), AR.py, 
+for real-time distance calculation, as well as a video feed from both cameras, utilizing camera calibration optimized for our experimental setup. The images and code used for calibration can be found in [this folder](https://github.com/AREVD/Phantom/tree/main/Fisheye%20Calibration%20Core). The output files of stereo.py are used to perform stereo camera calibration when running AR.py.
 
 ### Notes
 
 + The location of the foramen of Monro is specified in the `triangulate` function as the variables `pointA` and `pointB`. These values can be adjusted if necessary.
-+ The tip of the catheter is colored green in our development, and the code reflects this in lines 237-242. These RGB value thresholds are responsible for identifying the 2D location of the tip of the catheter in each camera view by identifying green pixels and finding the average of the x and y coordinates of the pixels. These thresholds can be adjusted to handle differences in lighting conditions and/or different color choices for the catheter tip.
-+ Manual offsets in line 274 can be adjusted to accommodate differences in observed distance values, which may result from variations between individual cameras.
-+ The brightness level is set using pulse width modulation (PWM), as full brightness can often make the identification of the catheter tip color difficult due to over-exposure. This results in visible flickering of the LED, which is expected. The brightness level is set at 25% in lines 297-298, and can be adjusted as necessary.
++ The tip of the catheter is colored green in our development, and the code reflects this in lines 153-158 (see below). 
+  These RGB 
+  value thresholds are responsible for identifying the 2D location of the tip of the catheter in each camera view by identifying green pixels and finding the average of the x and y coordinates of the pixels. These thresholds can be adjusted to handle differences in lighting conditions and/or different color choices for the catheter tip.
+```
+if buf is not None:
+    if item == "A":
+        lower = [14, 110, 0]  # color green boundaries
+        upper = [70, 255, 156]
+    elif item == "C":
+        lower = [14, 140, 0]  # color green boundaries
+        upper = [70, 255, 156]
+```
++ Manual offsets in line 190 can be adjusted to accommodate differences in observed distance values, which may result 
+  from variations between individual cameras.
+```
+c = str('%.2f' % (abs(6.6 * round(triangulate(mtxA, mtxB, R, T, ptA, ptC), 2) - 1.7)))
+```
++ The brightness level is set using pulse width modulation (PWM), as full brightness can often make the 
+  identification of the catheter tip color difficult due to over-exposure. This results in visible flickering of the 
+  LED, which is expected. The brightness level is set at 25% in lines 103-104 (see below), and can be adjusted as 
+  necessary.
+```
+p = gp.PWM(32,25)
+p.start(25)
+```
++ We set up a wireless network communication system using multithreading to send these distance results in real time to 
+  our AR 
+  headset, the Microsoft 
+  HoloLens 2. This implementation was omitted from the Quick Start script for simplicity as it is highly tailored to 
+  our 
+  experimental setup.
