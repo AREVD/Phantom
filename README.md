@@ -42,48 +42,76 @@ All 3D models were printed using PLA filament and Ultimaker 3 printers. Black fi
 
 ## Camera Hardware Setup
 
+<p align="center">
+  <img src="https://github.com/AREVD/Phantom/blob/main/Figures/figure1.jpg" width=50% height=50%>
+</p>
+<p align="center">
+Figure 1. Camera hardware setup steps.
+	</p>
+ 
 Required 3D print: [Camera_mounts.stl](https://github.com/AREVD/Phantom/blob/main/3D%20Models/Camera_mounts.stl)
 
 1. Replace cameras' native cables with the 60cm extension cables.
-2. Secure cameras to camera mounts using nuts and bolts on the four corners of each camera.
-3. Connect cameras to the multi camera adapter's A and C ports using the extension cables.
+2. Secure cameras to camera mounts using nuts and bolts on the four corners of each camera (Fig. 1a, 1b).
+3. Connect cameras to the multi camera adapter's A and C ports using the extension cables (Fig. 1c).
 4. Mount the adapter to pins 1-26 of the Raspberry Pi. Secure with nuts and bolts if desired.
 5. Connect the adapter's camera cable to the Raspberry Pi.
 
 ## Gelatin Mold Setup
 
+<p align="center">
+  <img src="https://github.com/AREVD/Phantom/blob/main/Figures/figure2.jpg" width=50% height=50%>
+</p>
+<p align="center">
+Figure 2. Gelatin mold setup steps.
+	</p>
+
 Required 3D print: [Gelatin_mold.stl](https://github.com/AREVD/Phantom/tree/main/3D%20Models/Gelatin_mold.stl)
 
 1. Cut acrylic sheets into 2-inch squares. Two squares are needed per mold.
-2. Secure squares from the inside of the gelatin mold using hot glue along all edges of the squares.
-3. Secure LED diode light to the bottom corner between the two camera windows using hot glue.
-4. Secure 6mm metal bead to the spherical indentation within the mold.
+2. Secure squares from the inside of the gelatin mold using hot glue along all edges of the squares (Fig. 2a, 2b).
+3. Secure LED diode light to the bottom corner between the two camera windows using hot glue (Fig. 2c).
+4. Secure 6mm metal bead to the spherical indentation within the mold (Fig. 2d).
 5. Ensure the mold is water-tight by filling it with water; if not, add hot glue as necessary.
-6. Connect the LED diode light to pins 32 (GPIO 12) and 34 (Ground) using DuPont wires. 
+6. Connect the LED diode light to pins 32 (GPIO 12) and 34 (Ground) using DuPont wires (Fig. 1c). 
 
 ## Gelatin Mixture Instructions
 
+<p align="center">
+  <img src="https://github.com/AREVD/Phantom/blob/main/Figures/figure3.jpg" width=50% height=50%>
+</p>
+<p align="center">
+Figure 3. Gelatin mixture setup steps.
+	</p>
+
 The following steps yield three molds' worth of gelatin mixture.
 
-1. Weigh out 20g of gelatin and combine with 250ml of cold water. Mix until clumping is no longer visualized. Let sit for 10-15 minutes.
+1. Weigh out 20g of gelatin and combine with 250ml of cold water. Mix until clumping is no longer visualized (Fig. 3a). Let sit for 10-15 minutes.
 2. Heat 700ml of water until steam is visualized. Closely monitor and do not allow to boil. A microwave is sufficient for heating.
-3. Combine the gelatin mixture with the larger volume of water. Mix thoroughly until mixture is clear.
+3. Combine the gelatin mixture with the larger volume of water. Mix thoroughly until mixture is clear (Fig. 3b).
 4. Cool mixture to room temperature. This can be accelerated by refrigerating the mixture. *Note: Closely monitor to prevent excessive cooling, which would cause the gelatin to coagulate prematurely.*
 5. Disconnect the gelatin molds' LED diode light from the DuPont wires.
 6. Suspend the molds in a cup or other container using paper towels or other supports such that the circular opening faces upwards and is parallel to the ground.
-7. Fill the molds with the mixture up to the opening.
+7. Fill the molds with the mixture up to the opening (Fig. 3c).
 8. Refrigerate for at least 1 hour.
 
 ## Final Hardware Setup
 
+<p align="center">
+  <img src="https://github.com/AREVD/Phantom/blob/main/Figures/figure4.jpg" width=50% height=50%>
+</p>
+<p align="center">
+Figure 4. Final hardware setup steps.
+	</p>
+
 Required 3D prints: [Top_skull_pegs.stl](https://github.com/AREVD/Phantom/tree/main/3D%20Models/Top_skull_pegs.stl), [Bottom_skull_pegs.stl](https://github.com/AREVD/Phantom/tree/main/3D%20Models/Bottom_skull_pegs.stl)
 
-1. Thread the DuPont wires through the holes in the bottom of the phantom into the inside of the phantom.
-2. Connect the DuPont wires to the LED diode light of the gelatin mold.
+1. Thread the DuPont wires through the holes in the bottom of the phantom into the inside of the phantom (Fig. 4a).
+2. Connect the DuPont wires to the LED diode light of the gelatin mold (Fig. 4b).
 3. Secure the camera mounts onto the gelatin mold using electrical tape. Position A at the back of the phantom and C on the right side of the phantom.
 4. Insert the mold into the peg in the center of the phantom.
 5. Close the phantom by connecting the top of the skull to the bottom of the skull. Secure with tape if necessary.
-6. Color the tip of the catheter using polish, paint, or silicone dye in a 2mm region. Our development uses a green color, but a different bright color that looks distinct from the rest of the environment (mold color, catheter color) may be used, although some colors may be suboptimal.
+6. Color the tip of the catheter using polish, paint, or silicone dye in a 2mm region (Fig. 4c). Our development uses a green color, but a different bright color that looks distinct from the rest of the environment (mold color, catheter color) may be used, although some colors may be suboptimal.
 
 # Software Setup
 
