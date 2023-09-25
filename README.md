@@ -134,8 +134,17 @@ pip install keyboard
 
 ## Quick Start
 
+<p align="center">
+  <img src="https://github.com/AREVD/Phantom/blob/main/Figures/figure5.gif" width=50% height=50%>
+</p>
+<p align="center">
+Figure 5. Quick start application.
+	</p>
+
 We provide a [straightforward script](https://github.com/AREVD/Phantom/blob/main/Quick%20Start/AR.py), AR.py, 
-for real-time distance calculation, as well as a video feed from both cameras, utilizing camera calibration optimized for our experimental setup. The images and code used for calibration can be found in [this folder](https://github.com/AREVD/Phantom/tree/main/Fisheye%20Calibration%20Core). The output files of stereo.py are used to perform stereo camera calibration when running AR.py.
+for real-time distance calculation, as well as a video feed from both cameras, utilizing camera calibration 
+optimized for our experimental setup (Fig. 5). The images and code used for calibration can be found in [this folder]
+(https://github.com/AREVD/Phantom/tree/main/Fisheye%20Calibration%20Core). The output files of stereo.py are used to perform stereo camera calibration when running AR.py.
 
 ### Notes
 
