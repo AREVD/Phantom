@@ -24,7 +24,7 @@ Our AR system provides real-time feedback to the user, who performs a catheter i
 4. (2x) [A1 FFCs 60cm Raspberry Pi Camera Extension Cable](https://a.co/d/9ydk6Bi)
 
 ### Gelatin Mold
-1. Acrylic Sheets
+1. [Acrylic Sheets](https://a.co/d/h83qMPt)
 2. [CHANZON White LED Diode Lights](https://a.co/d/ftPlEu8)
 3. [PandaHall Metal Beads](https://a.co/d/ffelK5M)
 4. [Custom Collagen SuperClear Gelatin](https://customcollagenshop.com/products/superclear-gelatin)
