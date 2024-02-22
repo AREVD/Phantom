@@ -1,5 +1,5 @@
 # Camera Sensor-Embedded Phantom Model for External Ventricular Drain
-This repository contains the developmental artifacts for the custom phantom skull model used in the paper _"Did I Do Well? Instantaneous Assessment of Trainees' Performance in Augmented Reality-assisted Neurosurgical Training"_, submitted to **the 5th Annual Workshop on 3D Content Creation for Simulated Training in eXtended Reality, co-located with IEEE VR, 2024** by [Sangjun Eom](https://sites.duke.edu/sangjuneom/), [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Tianyi Hu](http://hutianyi.tech/), Neha Vutakuri, Joshua Jackson, and [Maria Gorlatova](https://maria.gorlatova.com/). The repository includes all of the relevant code and assets necessary for the implementation of real-time distance calculation.
+This repository contains the developmental artifacts for the custom phantom skull model used in the paper _"Did I Do Well? Instantaneous Assessment of Trainees' Performance in Augmented Reality-assisted Neurosurgical Training"_, submitted to **the 5th Annual Workshop on 3D Content Creation for Simulated Training in eXtended Reality, co-located with IEEE VR, 2024** by [Sarah Eom](https://sites.duke.edu/sangjuneom/), [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Tianyi Hu](http://hutianyi.tech/), Neha Vutakuri, Joshua Jackson, and [Maria Gorlatova](https://maria.gorlatova.com/). The repository includes all of the relevant code and assets necessary for the implementation of real-time distance calculation.
 
 # Outline
 1. [Overview](https://github.com/AREVD/Phantom/blob/main/README.md#overview)
@@ -197,5 +197,5 @@ Please cite the following paper in your publications if this code helps your res
 }
 ```
 ### Acknowledgments
-The contributors of the code are [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Sangjun Eom](https://sites.duke.edu/sangjuneom/), and [Maria Gorlatova](https://maria.gorlatova.com/). For questions on this repository or the related paper, please contact Sangjun (Sarah) Eom at sangjun.eom [AT] duke [DOT] edu.
+The contributors of the code are [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Sarah Eom](https://sites.duke.edu/sangjuneom/), and [Maria Gorlatova](https://maria.gorlatova.com/). For questions on this repository or the related paper, please contact Sangjun (Sarah) Eom at sangjun.eom [AT] duke [DOT] edu.
 This work was supported in part by NSF grants CNS-2112562 and CNS-1908051, NSF CAREER Award IIS-2046072, and by a Thomas Lord Educational Innovation Grant.
