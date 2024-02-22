@@ -183,7 +183,7 @@ p.start(25)
   experimental setup.
 
 ### Associated Demo
-The associated demo, Did You Do Well? Real-Time Personalized Feedback on Catheter Placement in Augmented Reality-assisted Neurosurgical Training, presents an AR-assisted neurosurgical training tool that provides real-time personalized feedback based on trainees' manipulation of the surgical environment and eye gaze patterns. The video of this demo can be found on [YouTube](https://youtu.be/AKNKKrCvapI). 
+The associated demo, _"Did You Do Well? Real-Time Personalized Feedback on Catheter Placement in Augmented Reality-assisted Neurosurgical Training"_, presents an AR-assisted neurosurgical training tool that provides real-time personalized feedback based on trainees' manipulation of the surgical environment and eye gaze patterns. The video of this demo can be found on [YouTube](https://youtu.be/AKNKKrCvapI). 
 
 ### Citation
 Please cite the following paper in your publications if this code helps your research.
