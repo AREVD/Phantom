@@ -1,5 +1,5 @@
 # Camera Sensor-Embedded Phantom Model for External Ventricular Drain
-This repository contains the developmental artifacts for the custom phantom skull model used in the paper "Did I Do Well? Instantaneous Assessment of Trainees' Performance in Augmented Reality-assisted Neurosurgical Training", submitted to **IEEE VR 2024** for review, and includes all of the relevant code and assets necessary for the implementation of real-time distance calculation.
+This repository contains the developmental artifacts for the custom phantom skull model used in the paper "Did I Do Well? Instantaneous Assessment of Trainees' Performance in Augmented Reality-assisted Neurosurgical Training", submitted to **5th Annual Workshop on 3D Content Creation for Simulated Training in eXtended Reality, co-located with IEEE VR, 2024** by [Sangjun Eom](https://sites.duke.edu/sangjuneom/), [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Tianyi Hu](http://hutianyi.tech/), Neha Vutakuri, Joshua Jackson, and [Maria Gorlatova](https://maria.gorlatova.com/). The repository includes all of the relevant code and assets necessary for the implementation of real-time distance calculation.
 
 # Outline
 1. [Overview](https://github.com/AREVD/Phantom/blob/main/README.md#overview)
@@ -181,6 +181,9 @@ p.start(25)
   HoloLens 2. This implementation was omitted from the Quick Start script for simplicity as it is highly tailored to 
   our 
   experimental setup.
+
+### Associated Demo
+The associated demo, Did You Do Well? Real-Time Personalized Feedback on Catheter Placement in Augmented Reality-assisted Neurosurgical Training, presents an AR-assisted neurosurgical training tool that provides real-time personalized feedback based on trainees' manipulation of the surgical environment and eye gaze patterns. The video of this demo can be found on [YouTube](https://youtu.be/AKNKKrCvapI). 
 
 ### Citation
 Please cite the following paper in your publications if this code helps your research.
