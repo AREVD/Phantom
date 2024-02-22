@@ -181,3 +181,18 @@ p.start(25)
   HoloLens 2. This implementation was omitted from the Quick Start script for simplicity as it is highly tailored to 
   our 
   experimental setup.
+
+### Citation
+Please cite the following paper in your publications if this code helps your research.
+```
+@inproceedings{eom2022ar,
+  title={Did I Do Well? Personalized Assessment of Trainees' Performance in Augmented Reality-assisted Neurosurgical Training},
+  author={Eom, Sangjun and Ma, Tiffany and Hu, Tianyi and Vutakuri, Neha and Jackson, Joshua and Gorlatova, Maria},
+  booktitle={2024 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)},
+  year={2024},
+  organization={IEEE}
+}
+```
+### Acknowledgments
+The contributors of the code are [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Sangjun Eom](https://sites.duke.edu/sangjuneom/), and [Maria Gorlatova](https://maria.gorlatova.com/). For questions on this repository or the related paper, please contact Sangjun (Sarah) Eom at sangjun.eom [AT] duke [DOT] edu.
+This work was supported in part by NSF grants CNS-2112562 and CNS-1908051, NSF CAREER Award IIS-2046072, and by a Thomas Lord Educational Innovation Grant.
