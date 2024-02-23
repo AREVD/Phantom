@@ -182,10 +182,10 @@ p.start(25)
   our 
   experimental setup.
 
-### Associated Demo
+# Associated Demo
 The associated demo, _"Did You Do Well? Real-Time Personalized Feedback on Catheter Placement in Augmented Reality-assisted Neurosurgical Training"_, presents an AR-assisted neurosurgical training tool that provides real-time personalized feedback based on trainees' manipulation of the surgical environment and eye gaze patterns. The video of this demo can be found on [YouTube](https://youtu.be/AKNKKrCvapI). 
 
-### Citation
+# Citation
 Please cite the following paper in your publications if this code helps your research.
 ```
 @inproceedings{Eom24ARNeuro,
@@ -196,7 +196,7 @@ Please cite the following paper in your publications if this code helps your res
   organization={IEEE}
 }
 ```
-### Acknowledgments
+# Acknowledgments
 The contributors of the code are [Tiffany Ma](https://sites.duke.edu/tiffanyma/), [Sarah Eom](https://sites.duke.edu/sangjuneom/), and [Maria Gorlatova](https://maria.gorlatova.com/). For questions on this repository or the related paper, please contact Sangjun (Sarah) Eom at sangjun.eom [AT] duke [DOT] edu.
 
 This work was supported in part by NSF grants CNS-2112562 and CNS-1908051, NSF CAREER Award IIS-2046072, and by a Thomas Lord Educational Innovation Grant.
